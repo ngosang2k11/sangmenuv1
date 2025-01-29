@@ -187,13 +187,35 @@ local function toggle(button)
 end
 
 Toggle1.MouseButton1Click:Connect(function()
-    toggle(Toggle1)
+    if Toggle1.Text == "ON" then
+        local devilFruitsNormal = {"Portal", "T-Rex", "Mammoth", "Venom"}
+        local randomFruit = devilFruitsNormal[math.random(1, #devilFruitsNormal)]
+        print("Tăng tỷ lệ trái ác quỷ thần thoạt: " .. randomFruit)
+    else
+        print("Chức năng chưa bật!")
+    end
 end)
 
 Toggle2.MouseButton1Click:Connect(function()
-    toggle(Toggle2)
+    if Toggle2.Text == "ON" then
+        local devilFruitsMythical = {"Kitsune", "Portal", "Dragon", "Control"}
+        local randomFruit = devilFruitsMythical[math.random(1, #devilFruitsMythical)]
+        print("Tăng tỷ lệ trái ác quỷ thần thoại: " .. randomFruit)
+    else
+        print("Chức năng chưa bật!")
+    end
 end)
 
 Toggle3.MouseButton1Click:Connect(function()
-    toggle(Toggle3)
+    if Toggle3.Text == "ON" then
+        if math.random(1, 100) <= 98 then
+            local mythicalFruit = {"Kitsune", "Portal", "Dragon", "Control"}
+            local randomFruit = mythicalFruit[math.random(1, #mythicalFruit)]
+            print("Trái ác quỷ thần thoại rơi: " .. randomFruit)
+        else
+            print("Không có trái ác quỷ thần thoại rơi.")
+        end
+    else
+        print("Chức năng chưa bật!")
+    end
 end)
