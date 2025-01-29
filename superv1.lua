@@ -8,7 +8,7 @@ local Title = Instance.new("TextLabel")
 local StatusLabel = Instance.new("TextLabel")
 local OnlineLabel = Instance.new("TextLabel")
 
--- Tạo nút chức năng
+-- Nút chức năng
 local Button1 = Instance.new("TextButton")
 local Button2 = Instance.new("TextButton")
 local Button3 = Instance.new("TextButton")
