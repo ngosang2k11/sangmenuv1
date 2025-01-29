@@ -153,28 +153,31 @@ HideButton.MouseButton1Click:Connect(function()
     Frame.Visible = false
 end)
 
--- Chức năng toggle
+-- Hàm toggle để thay đổi trạng thái của công tắc
 local function toggle(button)
     if button.Text == "OFF" then
         button.Text = "ON"
-        button.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+        button.BackgroundColor3 = Color3.fromRGB(0, 255, 0)  -- Chuyển màu sang xanh khi bật
     else
         button.Text = "OFF"
-        button.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+        button.BackgroundColor3 = Color3.fromRGB(100, 100, 100)  -- Màu xám khi tắt
     end
 end
 
+-- Xử lý sự kiện nhấn công tắc
 Toggle1.MouseButton1Click:Connect(function()
     toggle(Toggle1)
 end)
+
 Toggle2.MouseButton1Click:Connect(function()
     toggle(Toggle2)
 end)
+
 Toggle3.MouseButton1Click:Connect(function()
     toggle(Toggle3)
 end)
 
--- Tăng tỷ lệ trái ác quỷ thần thoại
+-- Xử lý sự kiện nhấn Button1
 Button1.MouseButton1Click:Connect(function()
     if Toggle1.Text == "ON" then
         local devilFruitsNormal = {"Portal", "T-Rex", "Mammoth", "Venom"}
@@ -185,7 +188,7 @@ Button1.MouseButton1Click:Connect(function()
     end
 end)
 
--- Tăng tỷ lệ trái ác quỷ thần thoại mạnh mẽ
+-- Xử lý sự kiện nhấn Button2
 Button2.MouseButton1Click:Connect(function()
     if Toggle2.Text == "ON" then
         local devilFruitsMythical = {"Kitsune", "Portal", "Dragon", "Control"}
@@ -196,7 +199,7 @@ Button2.MouseButton1Click:Connect(function()
     end
 end)
 
--- Tăng tỷ lệ trái ác quỷ bot
+-- Xử lý sự kiện nhấn Button3
 Button3.MouseButton1Click:Connect(function()
     if Toggle3.Text == "ON" then
         if math.random(1, 100) <= 98 then
