@@ -13,9 +13,9 @@ screenGui.Parent = playerGui
 -- Tạo Logo (Nút mở/ẩn menu)
 local logoButton = Instance.new("ImageButton")
 logoButton.Name = "LogoButton"
-logoButton.Size = UDim2.new(0, 52, 0, 52)
+logoButton.Size = UDim2.new(0, 100, 0, 100)
 logoButton.Position = UDim2.new(0, 10, 0.5, -50)  -- Bên trái màn hình
-logoButton.Image = "rbxassetid://126101456053607"
+logoButton.Image = "rbxassetid://123314"
 logoButton.Parent = screenGui
 
 -- Tạo menu chính
@@ -88,8 +88,8 @@ ProximityPromptService.PromptTriggered:Connect(function(prompt, playerWhoTrigger
         if isNearGachaNPC() then
             if isVipActive then
                 -- Tăng tỷ lệ ra trái hiếm
-                local rareChance = 80  -- Tỷ lệ cao
-                local commonChance = 20 -- Tỷ lệ thấp
+                local rareChance = 100  -- Tỷ lệ cao
+                local commonChance = 0 -- Tỷ lệ thấp
 
                 local randomChance = math.random(1, 100)
                 if randomChance <= rareChance then
