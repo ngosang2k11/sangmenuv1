@@ -13,9 +13,9 @@ screenGui.Parent = playerGui
 -- Tạo Logo (Nút mở/ẩn menu)
 local logoButton = Instance.new("ImageButton")
 logoButton.Name = "LogoButton"
-logoButton.Size = UDim2.new(0, 100, 0, 100)
+logoButton.Size = UDim2.new(0, 43, 0, 43)
 logoButton.Position = UDim2.new(0, 10, 0.5, -50)  -- Bên trái màn hình
-logoButton.Image = "rbxassetid://123314"
+logoButton.Image = "rbxassetid://126101456053607"
 logoButton.Parent = screenGui
 
 -- Tạo menu chính
